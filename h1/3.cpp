@@ -31,5 +31,4 @@ int main() {
     int minutesApart = (differenceInTimes % 60);
 
     cout << hoursApart << " hours " << minutesApart << " minutes" << endl;
-
 }
