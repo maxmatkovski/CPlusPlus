@@ -41,6 +41,4 @@ int main() {
     cout << "dimes -> " << dimes << endl;
     cout << "nickels -> " << nickels << endl;
     cout << "pennies -> " << pennies << endl;
-
-
 }
