@@ -36,6 +36,5 @@ int main()
         cin >> response;
         cin.ignore();
     }
-    return 0;
-    
+    return 0; 
 }
