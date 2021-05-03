@@ -44,7 +44,6 @@ int main()
     
     cout << "(-b minus the square root of the discriminant) / 2a is " << negative_final << endl;
     
-    
 
     return 0;
 }
