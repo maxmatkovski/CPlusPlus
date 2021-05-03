@@ -17,5 +17,6 @@ int main() {
     cout << "their distance is " << abs(num1 - num2) << endl;
     cout << "their maximum is " << max(num1,num2) << endl;
     cout << "their minimum is " << min(num1, num2) << endl;
+    
 }
 
