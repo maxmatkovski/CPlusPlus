@@ -31,4 +31,5 @@ int decimal_to_binary(int number){
         i*=10;
     }
     return binary;
+    
 }
