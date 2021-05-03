@@ -10,4 +10,5 @@ int main() {
     string months = "January   February  March     April     May       June      July      August    September October   November  December  ";
 
     cout << months.substr(((input-1)*10),10) << endl;
+    
 }
