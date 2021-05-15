@@ -157,5 +157,3 @@ std::vector<bool> addition(std::vector<bool> v, std::vector<bool> w) {
 
     return d;
 }
-
-
