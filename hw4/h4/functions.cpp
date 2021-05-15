@@ -30,10 +30,6 @@ void fib(int N) {
         }
     }
 
-
-
-
-
 double get_double(std::string prompt) {
     std::cout << prompt << std::endl;
         double input; std::cin >> input;
@@ -47,17 +43,6 @@ double get_double(std::string prompt) {
             return 0.0; // ...and/or correct this.    return 0.0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 // DO NOT DELETE OR EDIT THIS FUNCTION
 void printMyVector(const std::vector<int>& v) {
     for (size_t i=0, N=v.size(); i<N; ++i) {
@@ -65,12 +50,6 @@ void printMyVector(const std::vector<int>& v) {
     }
     std::cout << std::endl;
 }
-
-
-
-
-
-
 
 std::vector<int> concatenateMyVectors(const std::vector<int>& u, const std::vector<int>& v) {
     
@@ -86,13 +65,6 @@ std::vector<int> concatenateMyVectors(const std::vector<int>& u, const std::vect
     
     return my_vector;
 }
-
-
-
-
-
-
-
 
 void sort5(int& i1, int& i2, int& i3, int& i4, int& i5) {
 
@@ -130,7 +102,6 @@ void sort5(int& i1, int& i2, int& i3, int& i4, int& i5) {
     }
 }
 
-
 void reverse(std::vector<int>& v) {
     
     int s = 0;
@@ -141,9 +112,7 @@ void reverse(std::vector<int>& v) {
         s++;
         e--;
     }
-    
 }
-
 
 void print(const std::vector<bool>& v) {
     for(int i = 0; i < v.size();i++){
@@ -159,6 +128,34 @@ void addZeros(std::vector<bool>& v, size_t numberToAdd) {
 
 
 std::vector<bool> addition(std::vector<bool> v, std::vector<bool> w) {
-    std:: vector<bool>
-    return std::vector<bool>(0);
+    std:: vector<bool>d;
+    
+    
+    size_t i = v.size();
+    size_t j = w.size();
+    
+    if(i > j){
+        addZeros(w, i-j);
+    } else if (j > i){
+        addZeros(v, j-i);
+    }
+    
+    int vector_size = v.size();
+
+    int carry = 0;
+    for(int i = 0; i < vector_size; i++){
+        int sum = carry;
+        sum += int(v[i]);
+        sum += int(w[i]);
+        d.push_back(sum%2);
+        carry = sum /2;
+    }
+    
+    if(carry != 0){
+        d.push_back(carry);
+    }
+
+    return d;
 }
+
+
