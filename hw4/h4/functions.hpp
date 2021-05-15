@@ -1,105 +1,107 @@
-#include "functions.hpp"
-using namespace std;
-
-int main() {
-//    // 1a
-//    cout << boolalpha;
-//    cout << "This should print false: " << leap_year(1999) << endl;
-//    cout << "This should print false: " << leap_year(1900) << endl;
-//    cout << "This should print true : " << leap_year(1996) << endl;
-//    cout << "This should print true : " << leap_year(2000) << endl;
-//    cout << endl;
-//
-//    // 1b
-//    cout << "This should print 1 1 2 3 5 8 13 21: " << endl;
-//    fib(8); cout << endl;
-//
-//    // 1c
-//    cout << "This should prompt the user with  "  << endl;
-//    cout << "\"What's your favourite number? \":" << endl;
-//
-//    double x = get_double("What's your favourite number?");
-//
-//    cout << "This should print your favorite number: ";
-//    cout << x << endl;
-//    cout << endl;
-
-//    // 2
-    vector<int> u = {1, 2, 3, 4, 5};
-    vector<int> v = {81, 82, 83};
-//    cout << "This should print 1 2 3 4 5:" << endl;
-//    printMyVector(u); cout << endl;
-//
-    vector<int> w = concatenateMyVectors(u, v);
-//    cout << "This should print 1 2 3 4 5 81 82 83:" << endl;
-//    printMyVector(w); cout << endl;
-
-//    // 3
-//    cout << "This should print out 1 2 3 4 5 six times:" << endl;
-//    int a, b, c, d, e;
-//
-//    a = 1; b = 2; c = 3; d = 4; e = 5;
-//    sort5(a, b, c, d, e);
-//    cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << endl;
-//
-//    a = 3; b = 5; c = 2; d = 4; e = 1;
-//    sort5(a, b, c, d, e);
-//    cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << endl;
-//
-//    a = 2; b = 5; c = 3; d = 4; e = 1;
-//    sort5(a, b, c, d, e);
-//    cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << endl;
-//
-//    a = 4; b = 1; c = 2; d = 3; e = 5;
-//    sort5(a, b, c, d, e);
-//    cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << endl;
-//
-//    a = 4; b = 3; c = 1; d = 2; e = 5;
-//    sort5(a, b, c, d, e);
-//    cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << endl;
-//
-//    a = 3; b = 4; c = 2; d = 5; e = 1;
-//    sort5(a, b, c, d, e);
-//    cout << a << ' ' << b << ' ' << c << ' ' << d << ' ' << e << endl;
-//    cout << endl;
-
-//    // 4
-//    reverse(u);
-//    cout << "This should print 5 4 3 2 1:" << endl;
-//    printMyVector(u); cout << endl;
-//
-//    reverse(w);
-//    cout << "This should print 83 82 81 5 4 3 2 1:" << endl;
-//    printMyVector(w); cout << endl;
-
-    // 5
-    cout << noboolalpha;
+#ifndef functions_hpp
+#define functions_hpp
 
 
-    vector<bool> b1 = {0, 1, 1, 0, 0, 1, 1};
-    vector<bool> b1copy = b1;
-//
-//
-//    cout << "This should print 0110011   : ";
-//    print(b1);
-//
-//    cout << "This should print 011001100 : ";
-//    addZeros(b1copy, 2);
-//    print(b1copy);
-//
-    vector<bool> b2 = {1, 0, 1, 0, 0, 1, 1, 1, 1};
-    vector<bool> b3 = addition(b1, b2);
-    vector<bool> b4 = addition(b2, b1);
+#include <iostream>     // cout, cin
+#include <cassert>      // assert in fib function
+#include <string>       // parameter in get_double
+#include <vector>       // a lot of code using vectors
+#include <utility>      // swap
 
-    cout << "This should print 1101001001: ";
-    print(b3);
-    cout << endl;
 
-    cout << "This should print 1101001001: ";
-    print(b4);
-    cout << endl;
-//
-//    cout << endl;
-//    return 0;
-}
+// Question 1a.
+/**
+ Determines whether a leap year or not
+ @param year: year in question
+ @return boolean on whether it's a leap year or not.
+*/
+bool leap_year(int year);
 
+// Question 1b.
+/**
+ Calculates sequence of fibonacci numbers
+ @param N is the number
+ @return returns nothing
+*/
+void fib(int N);
+
+// Question 1c.
+/**
+ COMMENT IT
+*/
+double get_double(std::string prompt);
+
+
+// Michael made this function. Do NOT delete it!!
+/**
+ Prints a vector of ints;
+ the ints are separated by spaces,
+ and an endl occurs at the end.
+
+ @param v : the vector to print
+*/
+void printMyVector(const std::vector<int>& v);
+
+// Question 2.
+// Michael commented this function.
+/**
+ Concatenates two vectors of ints.
+ @param v : the first vector
+ @param w : the second vector
+ @return the concatenation of v and w, that is,
+         the vector storing all of the values of v
+         followed by all of the values of w.
+*/
+std::vector<int> concatenateMyVectors(const std::vector<int>& v,
+                                      const std::vector<int>& w);
+
+
+// Question 3.
+/**
+ Sorts numbers
+ @param i1 : first int
+ @param i2 : second int
+ @param i3 : third int
+ @param i4 : fourth int
+ @param i5 : fifth int
+
+*/
+void sort5(int& i1, int& i2, int& i3, int& i4, int& i5);
+
+
+// Question 4.
+/**
+ reverses numbers
+ @param v
+ COMMENT IT
+*/
+void reverse(std::vector<int>& v);
+
+
+// Question 5.
+// Comment the functions!!
+
+/**
+ prints vector out
+ @param v
+ */
+void print(const std::vector<bool>& v);
+
+/**
+ adds set amount of zeros to vector
+ @param v : vector to add to
+ @param numberToAdd : number of zeros to add
+ */
+void addZeros(std::vector<bool>& v, size_t numberToAdd);
+
+/**
+    adds two binary vectors together
+    @param v :first vector
+    @param w :second vector
+    @return d : added vector to be returned
+ */
+std::vector<bool> addition(std::vector<bool> v,
+                           std::vector<bool> w);
+
+
+#endif /* functions_hpp */
