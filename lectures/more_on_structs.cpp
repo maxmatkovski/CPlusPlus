@@ -50,3 +50,44 @@ int main (){
      return 0;
 }
 
+// 
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+struct Rectangle{
+    
+    double len1;
+    double len2;
+    
+    double area () const {return len1 * len2;}
+    
+    Rectangle(double _len1, double _len2) : len1(_len1), len2(_len2) {
+        assert(len1 >= 0); assert(len2 >= 0);
+    }
+    
+    Rectangle() : len1(0), len2(0) {}
+};
+
+int main (){
+
+    const Rectangle r(3,4);
+    
+    cout << r.len1 << endl;
+    cout << r.len2 << endl;
+    
+    cout << r.area() << endl;
+    
+    Rectangle another_r;
+    another_r.len1 = 3;
+    another_r.len2 = 5;
+    
+    
+    return 0;
+}
+
+
+
